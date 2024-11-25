@@ -18,7 +18,7 @@ class _HomeViewState extends State<HomeView> {
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
-          title: Text('Weather App'),
+          title: const Text('Weather App'),
           actions: [
             IconButton(
               onPressed: () {
@@ -35,11 +35,11 @@ class _HomeViewState extends State<HomeView> {
         body: BlocBuilder<GetWeatherCubit, WeatherState>(
           builder: (context, state) {
             if (state is WeatherinitialState) {
-              return  NoWeather();
+              return  const NoWeather();
             } else if (state is WeatherLoadedState) {
-              return WeatherInfoBody();
+              return const WeatherInfoBody();
             } else {
-              return Text("oops there was an error");
+              return const Text("oops there was an error");
             }
           },
         ));

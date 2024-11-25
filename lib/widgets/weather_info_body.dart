@@ -6,8 +6,8 @@ import 'package:weather_app/models/weather_model.dart';
 
 class WeatherInfoBody extends StatelessWidget {
   const WeatherInfoBody({
-    Key? key,
-  }) : super(key: key);
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -31,14 +31,14 @@ class WeatherInfoBody extends StatelessWidget {
           children: [
             Text(
               BlocProvider.of<GetWeatherCubit>(context).weatherModel!.cityName,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 32,
               ),
             ),
             Text(
               'updated at ${weatherModel.date.hour}:${weatherModel.date.minute}',
-              style: TextStyle(
+              style: const TextStyle(
                 fontSize: 24,
               ),
             ),
@@ -53,7 +53,7 @@ class WeatherInfoBody extends StatelessWidget {
                 ),
                 Text(
                   weatherModel.temp.round().toString(),
-                  style: TextStyle(
+                  style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 32,
                   ),
@@ -62,13 +62,13 @@ class WeatherInfoBody extends StatelessWidget {
                   children: [
                     Text(
                       'Maxtemp: ${weatherModel.maxTemp.round()}', //convert from double to int
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                       ),
                     ),
                     Text(
                       'Mintemp: ${weatherModel.minTemp.round()}',
-                      style: TextStyle(
+                      style: const TextStyle(
                         fontSize: 16,
                       ),
                     ),
@@ -81,7 +81,7 @@ class WeatherInfoBody extends StatelessWidget {
             ),
             Text(
               weatherModel.weatherCondition,
-              style: TextStyle(
+              style: const TextStyle(
                 fontWeight: FontWeight.bold,
                 fontSize: 32,
               ),

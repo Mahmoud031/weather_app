@@ -5,8 +5,8 @@ class NoWeather extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: const Padding(
+    return const Scaffold(
+      body: Padding(
         padding: EdgeInsets.only(left: 40),
         child: Center(
           child: Text(
